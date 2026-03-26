@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Products — NutriVeda</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Nutri<span>Veda</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="products.html" style="color:var(--forest);font-weight:700;">Products</a></li>
+    <li><a href="index.html#why-us">About</a></li>
+    <li><a href="index.html#testimonials">Reviews</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="cart.html" class="nav-cart">🛒 <span id="cartCount">0</span></a></li>
+    <li><a href="cart.html" class="nav-cta">My Cart</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <a href="cart.html" class="nav-cart-mobile">🛒 <span id="cartCountMobile">0</span></a>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> › <span>All Products</span>
+  </div>
+  <h1>Our <em>Products</em></h1>
+  <p>Premium, certified nutrition for every goal — from strength to wellness.</p>
+</div>
+
+<section class="products-page">
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-cat="all" onclick="filterProducts('all', this)">All Products</button>
+    <button class="filter-btn" data-cat="protein" onclick="filterProducts('protein', this)">💪 Protein Powders</button>
+    <button class="filter-btn" data-cat="vitamins" onclick="filterProducts('vitamins', this)">💊 Vitamins & Supplements</button>
+    <button class="filter-btn" data-cat="herbal" onclick="filterProducts('herbal', this)">🌿 Herbal Blends</button>
+    <button class="filter-btn" data-cat="kids" onclick="filterProducts('kids', this)">🧡 Kids Nutrition</button>
+  </div>
+  <div class="all-products-grid" id="productsGrid"></div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script>
+  let currentCat = 'all';
+
+  function renderProducts(cat) {
+    const grid = document.getElementById('productsGrid');
+    const filtered = cat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.catKey === cat);
+    grid.innerHTML = '';
+    filtered.forEach((p, i) => {
+      const disc = Math.round((1 - p.price/p.mrp)*100);
+      grid.innerHTML += `
+        <div class="aprod-card reveal" style="animation-delay:${i*0.05}s">
+          <div class="aprod-img">${p.emoji}<div class="aprod-badge">${p.badge}</div></div>
+          <div class="aprod-body">
+            <div class="aprod-category">${p.category}</div>
+            <div class="aprod-name">${p.name}</div>
+            <div class="aprod-desc">${p.desc}</div>
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:14px;">
+              <span style="color:var(--gold);font-size:.9rem;">★★★★★</span>
+              <span style="font-size:.78rem;color:var(--text-light)">(${p.reviews} reviews)</span>
+            </div>
+            <div class="aprod-footer">
+              <div class="aprod-price">₹${p.price.toLocaleString()} <small>₹${p.mrp.toLocaleString()}</small>
+                <span style="background:rgba(200,150,12,.12);color:var(--earth);font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;">${disc}% OFF</span>
+              </div>
+              <div class="aprod-actions">
+                <a href="product.html?id=${p.id}" class="btn-aprod-view">View</a>
+                <button class="btn-aprod-add" onclick="addToCartById(${p.id}, this)">+ Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>`;
+    });
+    initReveal();
+  }
+
+  function filterProducts(cat, btn) {
+    currentCat = cat;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderProducts(cat);
+  }
+
+  // Handle URL param
+  const params = new URLSearchParams(window.location.search);
+  const catParam = params.get('cat');
+  if(catParam) {
+    currentCat = catParam;
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.cat === catParam);
+    });
+  }
+  renderProducts(currentCat);
+</script>
+</body>
+</html>

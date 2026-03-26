@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NutriVeda — Pure Nutrition, Powerful Life</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Nutri<span>Veda</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="products.html">Products</a></li>
+    <li><a href="index.html#why-us">About</a></li>
+    <li><a href="index.html#testimonials">Reviews</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="cart.html" class="nav-cart">🛒 <span id="cartCount">0</span></a></li>
+    <li><a href="products.html" class="nav-cta">Shop Now</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <a href="cart.html" class="nav-cart-mobile">🛒 <span id="cartCountMobile">0</span></a>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-circle c1"></div>
+  <div class="hero-bg-circle c2"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span> 100% Natural & FSSAI Certified</div>
+    <h1>Fuel Your Body with <em>Pure Nature</em></h1>
+    <p>Premium nutrition products crafted from the finest natural ingredients. Protein, vitamins, herbal blends & kids nutrition — all in one trusted place.</p>
+    <div class="hero-actions">
+      <a href="products.html" class="btn-primary">Explore Products →</a>
+      <a href="index.html#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">500<span>+</span></div><div class="stat-label">Happy Customers</div></div>
+      <div class="stat-item"><div class="stat-num">40<span>+</span></div><div class="stat-label">Products</div></div>
+      <div class="stat-item"><div class="stat-num">5<span>★</span></div><div class="stat-label">Avg Rating</div></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card-stack">
+      <div class="product-card-hero side1">
+        <div class="card-icon earth">🌿</div>
+        <div class="card-name">HerbalFlex</div>
+        <div class="card-tag">Herbal Blend</div>
+        <div class="card-price">₹499</div>
+      </div>
+      <div class="product-card-hero main">
+        <div class="card-icon green">💪</div>
+        <div class="card-name">VedaProtein Elite</div>
+        <div class="card-tag">Whey Protein • 1kg</div>
+        <div class="card-price">₹1,299</div>
+        <div class="card-rating">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      <div class="product-card-hero side2">
+        <div class="card-icon gold">🧡</div>
+        <div class="card-name">GrowStrong</div>
+        <div class="card-tag">Kids Nutrition</div>
+        <div class="card-price">₹649</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>Free Shipping Above ₹999</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>100% Natural Ingredients</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>FSSAI Certified</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>No Artificial Preservatives</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>GMP Certified Facility</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Trusted by 500+ Customers</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Free Shipping Above ₹999</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>100% Natural Ingredients</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>FSSAI Certified</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>No Artificial Preservatives</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>GMP Certified Facility</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Trusted by 500+ Customers</span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+  <div class="section-header reveal">
+    <div class="section-tag">What We Offer</div>
+    <h2 class="section-title">Our Product <em>Categories</em></h2>
+    <p class="section-sub">From daily vitamins to premium proteins — every product crafted with care.</p>
+  </div>
+  <div class="cat-grid">
+    <a href="products.html?cat=protein" class="cat-card reveal">
+      <span class="cat-emoji">💪</span>
+      <div class="cat-name">Protein Powders</div>
+      <div class="cat-count">Whey, Plant & Casein</div>
+      <div class="cat-arrow">→</div>
+    </a>
+    <a href="products.html?cat=vitamins" class="cat-card reveal">
+      <span class="cat-emoji">💊</span>
+      <div class="cat-name">Vitamins & Supplements</div>
+      <div class="cat-count">Daily Essentials & More</div>
+      <div class="cat-arrow">→</div>
+    </a>
+    <a href="products.html?cat=herbal" class="cat-card reveal">
+      <span class="cat-emoji">🌿</span>
+      <div class="cat-name">Herbal Blends</div>
+      <div class="cat-count">Ashwagandha, Turmeric & More</div>
+      <div class="cat-arrow">→</div>
+    </a>
+    <a href="products.html?cat=kids" class="cat-card reveal">
+      <span class="cat-emoji">🧡</span>
+      <div class="cat-name">Kids Nutrition</div>
+      <div class="cat-count">Safe & Delicious for Kids</div>
+      <div class="cat-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="products" id="products">
+  <div class="section-header reveal">
+    <div class="section-tag">Best Sellers</div>
+    <h2 class="section-title" style="color:var(--cream)">Featured <em>Products</em></h2>
+    <p class="section-sub" style="color:rgba(250,246,237,0.6)">Our most loved nutrition products — trusted by hundreds of families.</p>
+  </div>
+  <div class="products-grid" id="featuredGrid"></div>
+  <div style="text-align:center;margin-top:48px;" class="reveal">
+    <a href="products.html" class="btn-primary" style="display:inline-flex;">View All Products →</a>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <div class="why-grid">
+    <div class="why-features">
+      <div class="section-header reveal" style="text-align:left;margin-bottom:36px;">
+        <div class="section-tag">Why NutriVeda</div>
+        <h2 class="section-title">The <em>NutriVeda</em> Difference</h2>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon">🌾</div>
+        <div class="why-text"><h3>Farm-to-Bottle Ingredients</h3><p>We source directly from certified organic farms. Every ingredient is traceable, pure, and free from harmful additives.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon">🔬</div>
+        <div class="why-text"><h3>Third-Party Lab Tested</h3><p>Every batch is independently tested for purity, potency, and safety before it reaches your hands.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon">🚚</div>
+        <div class="why-text"><h3>Fast Local Delivery</h3><p>Based in Hyderabad — get your orders delivered within 2–3 business days across Telangana & AP.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon">💬</div>
+        <div class="why-text"><h3>Personal Nutrition Support</h3><p>Talk directly to Ravindar for personalised product recommendations tailored to your health goals.</p></div>
+      </div>
+    </div>
+    <div class="why-visual reveal">
+      <h2>Your Health is Our <span>Mission</span></h2>
+      <p>At NutriVeda, we believe good nutrition is the foundation of a happy, active life. Everything we make is designed for real people with real goals.</p>
+      <div class="trust-badges">
+        <div class="trust-badge"><div class="icon">✅</div><div class="label">FSSAI Certified</div></div>
+        <div class="trust-badge"><div class="icon">🌿</div><div class="label">100% Natural</div></div>
+        <div class="trust-badge"><div class="icon">🏭</div><div class="label">GMP Facility</div></div>
+        <div class="trust-badge"><div class="icon">🔒</div><div class="label">No Preservatives</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-header reveal">
+    <div class="section-tag">Customer Love</div>
+    <h2 class="section-title">What People Are <em>Saying</em></h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <div class="test-quote">"NutriVeda's whey protein is the best I've tried. No bloating, great taste, and excellent results in just 6 weeks!"</div>
+      <div class="test-author"><div class="test-avatar">RS</div><div><div class="test-name">Rajesh Sharma</div><div class="test-location">Miyapur, Hyderabad</div></div></div>
+    </div>
+    <div class="test-card reveal">
+      <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <div class="test-quote">"GrowStrong NutriMix for 3 months — my kids' energy levels are amazing and they love the taste!"</div>
+      <div class="test-author"><div class="test-avatar">PL</div><div><div class="test-name">Priya Lakshmi</div><div class="test-location">Kondapur, Hyderabad</div></div></div>
+    </div>
+    <div class="test-card reveal">
+      <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <div class="test-quote">"The AshwaBalance blend has been a game changer for my stress and sleep. Ravindar guided me personally!"</div>
+      <div class="test-author"><div class="test-avatar">AK</div><div><div class="test-name">Anita Kulkarni</div><div class="test-location">Chandanagar, Hyderabad</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="section-tag">Reach Us</div>
+      <h2>Let's Talk <em>Nutrition</em></h2>
+      <p>Have a question about our products? Want a personalised recommendation? Ravindar is here to help.</p>
+      <div class="contact-details">
+        <div class="contact-item"><div class="contact-item-icon">📞</div><div class="contact-item-text"><strong>Phone / WhatsApp</strong><a href="tel:+917893639037">+91 78936 39037</a></div></div>
+        <div class="contact-item"><div class="contact-item-icon">✉️</div><div class="contact-item-text"><strong>Email</strong><a href="mailto:nidigondaravindar@gmail.com">nidigondaravindar@gmail.com</a></div></div>
+        <div class="contact-item"><div class="contact-item-icon">📍</div><div class="contact-item-text"><strong>Address</strong><span>H.No: 12, Tiwari Nagar, Near Miyapur Police Station,<br>Chandanagar, Hyderabad — 500049</span></div></div>
+        <div class="contact-item"><div class="contact-item-icon">⏰</div><div class="contact-item-text"><strong>Business Hours</strong><span>Mon – Sat: 9:00 AM – 7:00 PM</span></div></div>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <h3>Send an Enquiry</h3>
+      <div class="form-row">
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full Name"></div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+      </div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Product Interest</label>
+        <select>
+          <option value="">Select a Category</option>
+          <option>Protein Powders</option>
+          <option>Vitamins & Supplements</option>
+          <option>Herbal Blends</option>
+          <option>Kids Nutrition</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Your Message</label><textarea placeholder="Tell us your health goals or ask about a specific product..."></textarea></div>
+      <button class="btn-submit" onclick="submitForm(this)">Send Enquiry →</button>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script>
+  // Render featured products (first 6)
+  const grid = document.getElementById('featuredGrid');
+  const featured = PRODUCTS.slice(0, 6);
+  featured.forEach(p => {
+    grid.innerHTML += `
+      <div class="prod-card reveal">
+        <div class="prod-img">${p.emoji}<div class="prod-badge">${p.badge}</div></div>
+        <div class="prod-body">
+          <div class="prod-category">${p.category}</div>
+          <div class="prod-name">${p.name}</div>
+          <div class="prod-desc">${p.desc}</div>
+          <div class="prod-footer">
+            <div class="prod-price">₹${p.price.toLocaleString()} <small>₹${p.mrp.toLocaleString()}</small></div>
+            <div style="display:flex;gap:8px;">
+              <a href="product.html?id=${p.id}" class="btn-view">View</a>
+              <button class="btn-add" onclick="addToCartById(${p.id}, this)">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  });
+  initReveal();
+</script>
+</body>
+</html>
