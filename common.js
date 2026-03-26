@@ -96,6 +96,7 @@ function renderFooter() {
           <li><a href="products.html?cat=vitamins">Vitamins & Supplements</a></li>
           <li><a href="products.html?cat=herbal">Herbal Blends</a></li>
           <li><a href="products.html?cat=kids">Kids Nutrition</a></li>
+          <li><a href="products.html?cat=porridge">Porridge & Mixes</a></li>
           <li><a href="products.html">All Products</a></li>
         </ul>
       </div>

@@ -104,7 +104,7 @@ section { position:relative; z-index:1; }
 
 /* CATEGORIES */
 .categories { padding:90px 5%; }
-.cat-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+.cat-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:24px; }
 .cat-card { background:var(--white); border-radius:24px; padding:36px 28px; text-align:center; border:1px solid rgba(200,150,12,.1); transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s; cursor:pointer; position:relative; overflow:hidden; text-decoration:none; display:block; }
 .cat-card:hover { transform:translateY(-8px); box-shadow:0 24px 60px rgba(26,58,42,.15); }
 .cat-emoji { font-size:3rem; margin-bottom:16px; display:block; }
