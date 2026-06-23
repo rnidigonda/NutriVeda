@@ -1,0 +1,147 @@
+═══════════════════════════════════════════════════════════════
+  EMAILJS CONFIGURATION - COPY/PASTE TEMPLATE
+═══════════════════════════════════════════════════════════════
+
+📋 Fill in these 3 values from your EmailJS dashboard:
+
+┌─────────────────────────────────────────────────────────────┐
+│ 1. PUBLIC KEY (from Account → General)                      │
+│    Example: abcd1234EFGH5678                                 │
+│                                                              │
+│    Your Public Key: _________________________________        │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ 2. SERVICE ID (from Email Services)                         │
+│    Example: service_abc1234                                  │
+│                                                              │
+│    Your Service ID: _________________________________        │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ 3. TEMPLATE ID (from Email Templates)                       │
+│    Example: template_xyz5678                                 │
+│                                                              │
+│    Your Template ID: ________________________________        │
+└─────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════
+  WHERE TO UPDATE IN index.html
+═══════════════════════════════════════════════════════════════
+
+Find and replace these THREE locations:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 LOCATION 1: Line ~268 (EmailJS Initialization)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FIND:
+  emailjs.init({
+    publicKey: "YOUR_EMAILJS_PUBLIC_KEY",
+  });
+
+REPLACE WITH:
+  emailjs.init({
+    publicKey: "abcd1234EFGH5678",  // ← Paste YOUR public key here
+  });
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 LOCATION 2: Line ~332 (Email Send Function)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FIND:
+  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+
+REPLACE WITH:
+  emailjs.send('service_abc1234', 'template_xyz5678', templateParams)
+                     ↑                    ↑
+              Service ID            Template ID
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+═══════════════════════════════════════════════════════════════
+  COPY/PASTE READY CODE (After filling your IDs above)
+═══════════════════════════════════════════════════════════════
+
+// STEP 1: Replace initialization
+emailjs.init({
+  publicKey: "___________YOUR_PUBLIC_KEY___________",
+});
+
+// STEP 2: Replace send function
+emailjs.send('___________YOUR_SERVICE_ID___________', 
+             '___________YOUR_TEMPLATE_ID___________', 
+             templateParams)
+
+═══════════════════════════════════════════════════════════════
+  EMAIL TEMPLATE (For EmailJS Dashboard)
+═══════════════════════════════════════════════════════════════
+
+Template Name: nutriveda_enquiry
+
+Subject: 🔔 New Enquiry from {{from_name}} | NutriVeda Website
+
+Body:
+─────────────────────────────────────────────────────────────
+New Customer Enquiry Received!
+
+Customer Details:
+─────────────────────
+👤 Name: {{from_name}}
+📞 Phone: {{from_phone}}
+📧 Email: {{from_email}}
+🛒 Product Interest: {{product_interest}}
+
+Message:
+─────────────────────
+{{message}}
+
+─────────────────────
+This enquiry was received from NutriVeda website contact form.
+Please respond within 24 hours.
+
+© 2025 NutriVeda | nidigondaravindar@gmail.com
+─────────────────────────────────────────────────────────────
+
+To Email: nidigondaravindar@gmail.com
+Reply To: {{from_email}}
+
+═══════════════════════════════════════════════════════════════
+  TESTING CHECKLIST
+═══════════════════════════════════════════════════════════════
+
+After updating the 3 IDs:
+
+[ ] Saved index.html with new IDs
+[ ] Refreshed browser (Ctrl+Shift+R)
+[ ] Filled test form with dummy data
+[ ] Clicked "Send Enquiry"
+[ ] Saw "Sending..." message
+[ ] Saw success message
+[ ] WhatsApp opened with notification
+[ ] Checked Gmail inbox for email
+[ ] Email received successfully
+[ ] All customer details in email correct
+[ ] FORM IS WORKING! 🎉
+
+═══════════════════════════════════════════════════════════════
+  QUICK SEARCH COMMANDS (VS Code / Text Editor)
+═══════════════════════════════════════════════════════════════
+
+Search for these exact strings in index.html:
+
+1. "YOUR_EMAILJS_PUBLIC_KEY"    → Replace with your public key
+2. "YOUR_SERVICE_ID"             → Replace with your service ID  
+3. "YOUR_TEMPLATE_ID"            → Replace with your template ID
+
+Total replacements needed: 3
+
+═══════════════════════════════════════════════════════════════
+
+NEED HELP?
+- Email: nidigondaravindar@gmail.com
+- Phone: +91 78936 39037
+- EmailJS Docs: https://www.emailjs.com/docs/
+
+═══════════════════════════════════════════════════════════════
+Last Updated: June 22, 2026

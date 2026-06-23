@@ -1,0 +1,44 @@
+# Documentation files (optional - you can keep these)
+*.md
+!README.md
+
+# Documentation folder
+docs/
+
+# PowerShell scripts
+scripts/
+*.ps1
+
+# Deployment scripts
+deploy.bat
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Archives
+*.zip
+*.rar
+*.tar.gz
+
+# Node modules (if you add npm later)
+node_modules/
+package-lock.json
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Backup files
+*.bak
+*.backup
+*~
